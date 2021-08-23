@@ -1,0 +1,75 @@
+.login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+	background-color: #fff;
+	box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.05);
+	border-radius: 16px;
+	padding: 30px 35px 35px 35px;
+	&__logo {
+		img {
+			width: 80px;
+			height: 82px;
+			margin: 0px 0px 25px 0px;
+		}
+	}
+	&__title {
+		text-align: center;
+		font-family: "Montserrat-Bold";
+		font-size: 24px;
+		line-height: 29px;
+		margin: 0px 0px 35px 0px;
+	}
+	&__item {
+		width: 500px;
+		height: 70px;
+		margin: 12px 0px 35px 0px;
+		box-sizing: border-box;
+		input[type="password"] {
+			padding: 28px 25px 20px 25px;
+		}
+		input {
+			color: #5b5b5b;
+			font-size: 18px;
+			line-height: 22px;
+			border: 1px solid #c1c1c1;
+			border-radius: 16px;
+			padding: 0px 25px;
+		}
+	}
+	&__input {
+		width: 80%;
+		height: 100%;
+		padding: 5px 10px;
+	}
+	&__label {
+		font-family: "Montserrat-Bold";
+	}
+	&__btn {
+		background-color: #3c9c41;
+		font-family: "Montserrat-Bold";
+		color: #fff;
+		width: 100%;
+		height: 100%;
+		font-size: 18px;
+		border-radius: 16px;
+		margin: 5px 0px 0px 0px;
+		transition: background-color 0.5s ease 0s;
+		&:hover {
+			background-color: #4db252;
+		}
+		&:active {
+			background-color: #318636;
+		}
+	}
+	&__text {
+		&:last-child {
+			margin: 20px 0px 0px 0px;
+		}
+		a {
+			font-family: "Montserrat-Bold";
+			color: #3c9c41;
+		}
+	}
+}

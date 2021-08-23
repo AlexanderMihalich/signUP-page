@@ -1,18 +1,8 @@
 @import-normalize;
 
-//<ПЕРЕМЕННЫЕ>=================================================
-$minWidth: 320px;
-$maxWidth: 1920;
-$maxWidthContainer: 960;
-$md1: $maxWidthContainer + 12;
-$md2: 991.98;
-$md3: 880;
-$md4: 479.98;
-$md5: 420;
-//</ПЕРЕМЕННЫЕ>================================================
-
 /* <ОБОЛОЧКА>=================================================== */
 body {
+	background-color: #e5e5e5;
 	color: #5b5b5b;
 	font-size: 18px;
 	font-family: "Montserrat-Regular";
@@ -20,10 +10,13 @@ body {
 .wrapper {
 	width: 100%;
 	min-height: 100%;
-	overflow: hidden;
-	display: flex;
-	flex-direction: column;
 	position: relative;
+	&__content {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 }
 /* </ОБОЛОЧКА>=================================================== */
 

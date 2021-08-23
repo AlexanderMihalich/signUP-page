@@ -1,0 +1,23 @@
+.form {
+	&__control {
+		height: 100%;
+		width: 100%;
+	}
+	&__element {
+		height: 100%;
+		width: 100%;
+		padding: 5px 10px;
+	}
+	&__control.error {
+		input {
+			transition: all 0.5s ease 0s;
+			color: #d23737;
+			border: 1px solid #d23737;
+			margin: 0px 0px 10px 0px;
+		}
+		span {
+			transition: all 0.5s ease 0s;
+			color: #d23737;
+		}
+	}
+}

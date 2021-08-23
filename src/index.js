@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './assets/css/null.scss';
 import './assets/css/index.scss';
 import './assets/css/fonts.scss';
-import App from './App';
+import AppForm from './AppForm';
+import store from './redux/store'
+import { Provider } from 'react-redux';
 
-ReactDOM.render(
-	<React.StrictMode>
-		<App />
-	</React.StrictMode>,
-	document.getElementById('root')
-);
+	ReactDOM.render(
+		<Provider store={store}>
+			<AppForm/>
+		</Provider>,document.getElementById('root'));
+
 
