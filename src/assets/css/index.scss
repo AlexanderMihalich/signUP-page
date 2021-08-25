@@ -15,10 +15,9 @@ body {
 	min-height: 100%;
 	position: relative;
 	&__content {
-		height: 100vh;
+		height: 100%;
 		display: flex;
 		justify-content: center;
-		align-items: center;
 	}
 }
 /* </ОБОЛОЧКА>=================================================== */
