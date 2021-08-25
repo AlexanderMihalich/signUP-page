@@ -123,7 +123,7 @@ let LoginForm = (props) => {
 	)
 }
 
-const afterSubmit = (result, dispatch) => dispatch(reset('ordersTradesSearchForm'));
+const afterSubmit = (result, dispatch) => dispatch(reset('login'));
 
 LoginForm = reduxForm({ form: 'login', onSubmitSuccess: afterSubmit, })(LoginForm)
 
