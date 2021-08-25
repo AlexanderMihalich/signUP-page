@@ -13,6 +13,8 @@ let LoginForm = (props) => {
 	const [radioActive, setRadioActive] = useState(0)
 	const [knowCreatePasswordValue, setKnowCreatePasswordValue] = useState('')
 	const [passwordsMatch, setPasswordsMatch] = useState(true)
+	const [createHide, setCreateHide] = useState(true)
+	const [confirmHide, setConfirmHide] = useState(true)
 
 	const knowConfirmPasswordValue = (value) => {
 		if (value === knowCreatePasswordValue) {
@@ -22,6 +24,12 @@ let LoginForm = (props) => {
 			setPasswordsMatch(false)
 			passwordMatchValue = passwordMatch(false)
 		}
+	}
+	const hideCreateSwitch = () => {
+		setCreateHide(!createHide)
+	}
+	const hideConfirmSwitch = () => {
+		setConfirmHide(!confirmHide)
 	}
 
 	return (
@@ -70,20 +78,48 @@ let LoginForm = (props) => {
 			</div>
 			<label htmlFor="CreatePassword" className="login__label">Create Password</label>
 			<div className="login__item">
-				<Field type="password" id="CreatePassword" name="CreatePassword" placeholder="***********" component={Element} validate={[required, maxLength6]} className="login__input"
+				<Field type={createHide ? 'password' : 'text'} id="CreatePassword" name="CreatePassword" placeholder="***********" component={Element} validate={[required, maxLength6]} className="login__input"
 					onChange={e => e.target.value = setKnowCreatePasswordValue(e.target.value)}
 				/>
+				<span className="login__show" onClick={hideCreateSwitch}>
+					{createHide
+						? <svg viewBox="0 0 512 512"><g>
+							<path d="M256,193.4c-46.4,0-86.8,25.2-108.5,62.6c21.7,37.4,62.1,62.6,108.5,62.6c46.4,0,86.8-25.2,108.5-62.6   C342.8,218.6,302.4,193.4,256,193.4z"
+								fill="none" stroke="#C1C1C1" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="10" />
+							<circle cx="256" cy="256" fill="none" r="37.7" stroke="#C1C1C1" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="10" /></g>
+						</svg>
+						: <svg viewBox="0 0 512 512"><g>
+							<path d="M256,193.4c-46.4,0-86.8,25.2-108.5,62.6c21.7,37.4,62.1,62.6,108.5,62.6c46.4,0,86.8-25.2,108.5-62.6   C342.8,218.6,302.4,193.4,256,193.4z"
+								fill="none" stroke="#3c9c41" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="10" />
+							<circle cx="256" cy="256" fill="none" r="37.7" stroke="#3c9c41" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="10" /></g>
+						</svg>
+					}
+				</span>
 			</div>
 			<label htmlFor="ConfirmPassword" className="login__label">Confirm Password</label>
 			<div className={cn("login__item", passwordsMatch === false ? "error" : "")} onClick={() => setRadioActive(2)}>
-				<Field type="password" id="ConfirmPassword" name="ConfirmPassword" placeholder="***********" component={Element} validate={[required, maxLength6, passwordMatchValue]} className="login__input"
+				<Field type={confirmHide ? 'password' : 'text'} id="ConfirmPassword" name="ConfirmPassword" placeholder="***********" component={Element} validate={[required, maxLength6, passwordMatchValue]} className="login__input"
 					onChange={e => e.target.value = knowConfirmPasswordValue(e.target.value)}
 				/>
+				<span className="login__show" onClick={hideConfirmSwitch}>
+					{confirmHide
+						? <svg viewBox="0 0 512 512"><g>
+							<path d="M256,193.4c-46.4,0-86.8,25.2-108.5,62.6c21.7,37.4,62.1,62.6,108.5,62.6c46.4,0,86.8-25.2,108.5-62.6   C342.8,218.6,302.4,193.4,256,193.4z"
+								fill="none" stroke="#C1C1C1" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="10" />
+							<circle cx="256" cy="256" fill="none" r="37.7" stroke="#C1C1C1" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="10" /></g>
+						</svg>
+						: <svg viewBox="0 0 512 512"><g>
+							<path d="M256,193.4c-46.4,0-86.8,25.2-108.5,62.6c21.7,37.4,62.1,62.6,108.5,62.6c46.4,0,86.8-25.2,108.5-62.6   C342.8,218.6,302.4,193.4,256,193.4z"
+								fill="none" stroke="#3c9c41" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="10" />
+							<circle cx="256" cy="256" fill="none" r="37.7" stroke="#3c9c41" strokeLinecap="round" strokeLinejoin="round" strokeMiterlimit="10" strokeWidth="10" /></g>
+						</svg>
+					}
+				</span>
 			</div>
 			<div className="login__item">
 				<button className="login__btn">Sign Up</button>
 			</div>
-		</form>
+		</form >
 	)
 }
 
