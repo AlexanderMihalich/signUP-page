@@ -4,6 +4,11 @@ export const required = value => {
 }
 
 export const maxLengthCreator = (maxLength) => value => {
-	if (value && value.length < maxLength) return `Max length is ${maxLength} symbol`
+	if (value && value.length < maxLength) return `Min length is ${maxLength} symbol`
+	return undefined
+}
+
+export const passwordMatch = (valuePassword) => value => {
+	if (value && valuePassword === false) return "Password mismatch"
 	return undefined
 }

@@ -83,6 +83,12 @@
 			border-radius: 16px;
 			padding: 0px 25px;
 		}
+		&.error {
+			input {
+				color: #d23737;
+				border: 1px solid #d23737;
+			}
+		}
 	}
 	&__input {
 		width: 80%;

@@ -5,9 +5,7 @@ import cn from 'classnames';
 function AppForm() {
 	const sendData = (formData) => {
 		console.log(formData);
-		formData.CreatePassword === formData.ConfirmPassword
-			? alert(` gender - ${formData.gender}, \n login - ${formData.Email}, \n password - ${formData.CreatePassword}`)
-			: alert("please confirm password")
+		alert(`gender - ${formData.gender === undefined ? "not indicated" : formData.gender}, \n login - ${formData.Email}, \n password - ${formData.CreatePassword}`)
 	}
 	return (
 		<div className="wrapper">
