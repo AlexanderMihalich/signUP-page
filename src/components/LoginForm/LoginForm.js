@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './LoginForm.scss'
 import { reset, reduxForm, Field } from 'redux-form';
-import { maxLengthCreator, passwordMatch, required } from '../../redux/validators/validators';
+import { emailValid, maxLengthCreator, passwordMatch, required } from '../../redux/validators/validators';
 import { Element } from '../common/FormsControls/FormsControls';
 import cn from 'classnames';
 
@@ -66,7 +66,7 @@ let LoginForm = (props) => {
 			</div>
 			<label htmlFor="Email" className="login__label">E-mail</label>
 			<div className="login__item">
-				<Field type="email" id="Email" name="Email" placeholder="johnsmith@mail.com" component={Element} validate={[required]} className="login__input" />
+				<Field type="email" id="Email" name="Email" placeholder="johnsmith@mail.com" component={Element} validate={[required, emailValid]} className="login__input" />
 			</div>
 			<label htmlFor="CreatePassword" className="login__label">Create Password</label>
 			<div className="login__item">

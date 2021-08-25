@@ -7,7 +7,7 @@ export const Element = ({ input, meta, ...props }) => {
 
 	return (
 		<div className={`${style.form__control} ${hasError ? style.error : ""} ${hasValid ? style.valid : ""}`}>
-			<input {...input} {...props} className={style.form__element} />
+			<input {...input} {...props} className={style.form__element} required />
 			{hasError && <span> {meta.error} </span>}
 		</div>
 	);
