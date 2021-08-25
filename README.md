@@ -6,6 +6,6 @@ This test task implements a form with validation, comparison of the authenticity
 
 ## Used:
 
-React, React-Hooks, React-Redax,
+React, React-Hooks, React-Redux,
 
-Redax-Form, SCSS, SVG
+Redux-Form, Redux-Thunk, SCSS, SVG
