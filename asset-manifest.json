@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/signUP-page/static/css/main.a1b051d7.chunk.css",
+    "main.css": "/signUP-page/static/css/main.2d634cea.chunk.css",
     "main.js": "/signUP-page/static/js/main.44aaf417.chunk.js",
     "main.js.map": "/signUP-page/static/js/main.44aaf417.chunk.js.map",
     "runtime-main.js": "/signUP-page/static/js/runtime-main.e942314c.js",
@@ -8,14 +8,14 @@
     "static/js/2.d82a9a48.chunk.js": "/signUP-page/static/js/2.d82a9a48.chunk.js",
     "static/js/2.d82a9a48.chunk.js.map": "/signUP-page/static/js/2.d82a9a48.chunk.js.map",
     "index.html": "/signUP-page/index.html",
-    "static/css/main.a1b051d7.chunk.css.map": "/signUP-page/static/css/main.a1b051d7.chunk.css.map",
+    "static/css/main.2d634cea.chunk.css.map": "/signUP-page/static/css/main.2d634cea.chunk.css.map",
     "static/js/2.d82a9a48.chunk.js.LICENSE.txt": "/signUP-page/static/js/2.d82a9a48.chunk.js.LICENSE.txt",
     "static/media/fonts.scss": "/signUP-page/static/media/Montserrat-Regular.087334ca.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.e942314c.js",
     "static/js/2.d82a9a48.chunk.js",
-    "static/css/main.a1b051d7.chunk.css",
+    "static/css/main.2d634cea.chunk.css",
     "static/js/main.44aaf417.chunk.js"
   ]
 }
